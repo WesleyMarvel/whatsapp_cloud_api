@@ -7,8 +7,8 @@ import json
 
 app = Flask(__name__)
 
-messenger = WhatsApp('EAAUuI61kKewBADnNtmZCEc3SfDyh074JJbEo3JErXFrxniGwDgW1DscXuM0oIR3YhBtAc64ZBzxh75ZAHSMGA0JTNz1WO90XWoMW8ehksEURCZAg7cDOJzRBQtWxZBOYfdIta3Ox6ZBrnMUGs7KyzAnASvI3LZBxLM83WMtzhKSS1BdOC86V1rttXOt1MosOmfNoOgYhsxdNRczlIlbdBo2ErUvzgNCxMEZD', phone_number_id='101780209235905')
-VERIFY_TOKEN = "Wesley13"
+messenger = WhatsApp('', phone_number_id='')
+VERIFY_TOKEN = ""
 load_dotenv()
 @app.route('/hook', methods=["GET", "POST"])
 def hello():
@@ -20,7 +20,7 @@ def hello():
         if "hi" == trimmed.lower():
             messenger.send_message(
                     message="Hello Wesley",
-                    recipient_id="263785564315",
+                    recipient_id="263XXXXXXX5",
                 )
         
     if request.method == "GET":
